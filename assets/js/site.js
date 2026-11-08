@@ -1,8 +1,10 @@
 // Site behaviour on top of scroll-kit: nav menu, battery meter, power ladder, calculator, forms, filters, logo intro.
 import { initScrollKit, onScrub, pinProgress, reduced, clamp, $, $$ } from './scroll-kit.js';
 import { SITE } from './config.js';
+import { initFx, makeFlap, setOdometer, makePayback, whenVisible } from './fx.js';
 
 initScrollKit();
+initFx();
 
 /* Logo intro: under a second, once per visit */
 const intro = $('.intro');
@@ -14,7 +16,7 @@ if (intro && document.documentElement.classList.contains('show-intro')) {
 
 /* Battery meter */
 const pct = $('.batt__pct');
-if (pct) onScrub(() => { const max = document.documentElement.scrollHeight - innerHeight; pct.textContent = Math.round((max > 0 ? clamp(scrollY / max) : 0) * 100) + '%'; });
+if (pct) onScrub(() => { const max = document.documentElement.scrollHeight - innerHeight; const v = Math.round((max > 0 ? clamp(scrollY / max) : 0) * 100) + '%'; if (pct.textContent !== v) pct.textContent = v; });
 
 /* Products menu: hover for mouse, click for everyone, Escape closes */
 const menu = $('.has-menu');
@@ -35,8 +37,10 @@ if (ladder) {
   const rungs = $$('.rung', ladder), arts = $$('.rung-art', ladder), ticks = $$('.scale__tick', ladder);
   const ys = rungs.map((r) => Number(r.dataset.y));
   const n = rungs.length;
+  const board = makeFlap($('[data-flap]', ladder));
+  const dither = $('canvas[data-dither]', ladder);
   let cur = -1;
-  onScrub(() => {
+  whenVisible(ladder, () => {
     const p = pinProgress(ladder);
     const f = clamp(p * n, 0, n - 0.0001);
     const i = Math.floor(f);
@@ -44,8 +48,10 @@ if (ladder) {
     const local = clamp((f - i - 0.62) / 0.38);
     ladder.style.setProperty('--y', (a + (b - a) * local).toFixed(4));
     ladder.style.setProperty('--lp', p.toFixed(3));
+    if (dither) dither.energy = a + (b - a) * local;
     if (i !== cur) {
       cur = i;
+      board.set(rungs[i].dataset.kw, rungs[i].dataset.unit);
       rungs.forEach((r, k) => { r.classList.toggle('on', k === i); r.setAttribute('aria-hidden', String(k !== i)); });
       arts.forEach((r, k) => { r.classList.toggle('on', k === i); r.classList.toggle('past', k < i); });
       ticks.forEach((t, k) => t.classList.toggle('on', k <= i));
@@ -59,11 +65,13 @@ if (calc) {
   const num = (id) => Number($('#' + id, calc).value);
   const inr = (v) => '₹' + Math.round(v).toLocaleString('en-IN');
   const out = (k, v) => { $(`[data-out="${k}"]`, calc).textContent = v; };
+  const odo = $('[data-odo]', calc);
+  const payback = makePayback($('[data-payback]', calc));
   const run = () => {
     const opt = $('#c-model', calc).selectedOptions[0];
     const kw = Number(opt.dataset.kw), price = Number(opt.dataset.price);
     const qty = num('c-qty'), sessions = num('c-sessions'), kwh = num('c-kwh'), tariff = num('c-tariff'), cost = num('c-cost');
-    $$('input[type=range]', calc).forEach((r) => { const o = calc.querySelector(`output[for="${r.id}"]`); if (o) o.textContent = r.dataset.prefix ? r.dataset.prefix + r.value : r.value; });
+    $$('input[type=range]', calc).forEach((r) => { const o = calc.querySelector(`output[for="${r.id}"]`); if (o) o.textContent = r.dataset.prefix ? r.dataset.prefix + r.value : r.value; r.style.setProperty('--f', ((r.value - r.min) / (r.max - r.min) * 100).toFixed(1) + '%'); });
     const daily = sessions * kwh;
     const capacity = kw * 24;
     const energy = daily * qty * 30;
@@ -72,6 +80,8 @@ if (calc) {
     const hardware = price * qty;
     const months = margin > 0 ? hardware / margin : Infinity;
     out('margin', inr(margin));
+    setOdometer(odo, inr(margin));
+    payback(margin, hardware);
     out('revenue', inr(revenue));
     out('energy', Math.round(energy).toLocaleString('en-IN') + ' kWh');
     out('hardware', inr(hardware));

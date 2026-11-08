@@ -273,7 +273,7 @@ button { cursor: pointer; }
 .team { margin-top: clamp(3rem, 8vh, 5rem); border-top: 1.5px solid var(--ink); }
 .team li { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: .3rem 1.5rem; padding: 1.05rem 0; border-bottom: 1px solid var(--line); }
 .team strong { font: 620 clamp(1.3rem, 3vw, 2.5rem)/1.1 var(--f-display); font-stretch: 112%; letter-spacing: -.02em; }
-.team span { font: 500 .95rem var(--f-mono); color: var(--ink-2); padding-right: 64px; }
+.team li > span { font: 500 .95rem var(--f-mono); color: var(--ink-2); padding-right: 64px; }
 @media (max-width: 760px) { .photos { grid-template-columns: repeat(2, minmax(0, 1fr)); } .photos figure:nth-child(n) { margin-top: 0; } .photos figure:nth-child(even) { margin-top: 1.4rem; } }
 
 /* Closing + footer */

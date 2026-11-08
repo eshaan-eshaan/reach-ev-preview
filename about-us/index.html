@@ -12,7 +12,8 @@
 <link rel="preload" href="../assets/fonts/archivo-wdth.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/css/scroll-kit.css">
 <link rel="stylesheet" href="../assets/css/site.css">
-<script>(function(){var d=document.documentElement;d.classList.add('js');try{var q=new URLSearchParams(location.search);if(!matchMedia('(prefers-reduced-motion: reduce)').matches&&!q.has('nointro')&&(q.has('intro')||!sessionStorage.getItem('reach-intro')))d.classList.add('show-intro')}catch(e){}})();</script>
+<link rel="stylesheet" href="../assets/css/fx.css">
+<script>(function(){var d=document.documentElement;d.classList.add('js');try{var q=new URLSearchParams(location.search);if(!matchMedia('(prefers-reduced-motion: reduce)').matches&&!q.has('nointro')&&(q.has('intro')||!sessionStorage.getItem('reach-intro')))d.classList.add('show-intro')}catch(e){}setTimeout(function(){d.classList.add('hero-ready')},d.classList.contains('show-intro')?660:30);})();</script>
 
 </head>
 <body>
@@ -27,13 +28,16 @@
       <a data-dock-item href="../use-case/">Use Cases</a>
       <div class="has-menu"><button data-dock-item type="button" aria-expanded="false" aria-haspopup="true">Products <svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M1 3l4 4 4-4"/></svg></button>
         <div class="menu">
-          <a href="../products/">All products <small>21</small></a>
-          <a href="../ac-chargers-1/">AC Chargers <small>3.3 to 22 kW</small></a>
-          <a href="../dc-chargers-2/">DC Fast Chargers <small>15 to 360 kW</small></a>
-          <a href="../portable-ev-chargers/">Portable Chargers <small>3.7 to 22 kW</small></a>
-          <a href="../ev-components/">EV Components <small>2W and 3W</small></a>
-          <a href="../customised-canopy-solutions/">Customised Canopy <small>Made to order</small></a>
-          <a href="../qix-cms/">QiX CMS <small>Software</small></a>
+          <div class="menu__list">
+          <a data-view="0" href="../products/">All products <small>21</small></a>
+          <a data-view="1" href="../ac-chargers-1/">AC Chargers <small>3.3 to 22 kW</small></a>
+          <a data-view="2" href="../dc-chargers-2/">DC Fast Chargers <small>15 to 360 kW</small></a>
+          <a data-view="3" href="../portable-ev-chargers/">Portable Chargers <small>3.7 to 22 kW</small></a>
+          <a data-view="4" href="../ev-components/">EV Components <small>2W and 3W</small></a>
+          <a data-view="5" href="../customised-canopy-solutions/">Customised Canopy <small>Made to order</small></a>
+          <a data-view="6" href="../qix-cms/">QiX CMS <small>Software</small></a>
+          </div>
+          <div class="menu__view" aria-hidden="true"><div class="mv on"><img data-src="../assets/img/products/dc-60-kw-ccs2-x2-ac-22-kw-type-2-ev-triple-gun-combination-charger.webp" alt=""></div><div class="mv"><img data-src="../assets/img/products/22-kw-type-2-dual-gun-ac-ev-charger.webp" alt=""></div><div class="mv"><img data-src="../assets/img/charger-dual.webp" alt=""></div><div class="mv mv--mult"><img data-src="../assets/img/products/22-kw-type-2-portable-ev-charger.webp" alt=""></div><div class="mv"><img data-src="../assets/img/products/vehicle-control-unit-vcu-for-2w-and-3w.webp" alt=""></div><div class="mv"><img data-src="../assets/img/products/canopy-manufacturing.webp" alt=""></div><div class="mv"><p class="mv__txt">Scan.<br>Pay.<br>Charge.</p></div></div>
         </div>
       </div>
       <a data-dock-item href="../faq/">FAQs</a>
@@ -48,7 +52,7 @@
   </div>
 </header>
 <main id="main">
-<section class="page-head"><div class="wrap">
+<section class="page-head"><canvas class="dither" data-dither data-px="4" data-colors="#06182A,#0A2C46,#0D4565,#0F6895" aria-hidden="true"></canvas><div class="wrap">
   <ol class="crumbs"><li><a href="../">Home</a></li><li>About Us</li></ol>
   <h1 class="h-lg">Born on <span class="serif">World Environment Day</span></h1><p class="lede">REACH, the Reliable Electric Automotive Charging Hub, is a brand of Tech Green Innovations. We started on 5 June 2023 to accelerate India’s move to sustainable mobility.</p>
 </div></section>
@@ -56,12 +60,12 @@
   <div data-reveal><h2 class="h-md">Our vision</h2><p class="lede" style="margin-top:.7rem">A future where sustainable transportation is the norm and electric vehicles are part of daily life, with cleaner air, lower emissions and a healthier planet.</p></div>
   <div data-reveal style="--d:1"><h2 class="h-md">Our mission</h2><p class="lede" style="margin-top:.7rem">To accelerate the transition to electric vehicles by building innovative, accessible and efficient charging units, and to give drivers a worry-free experience.</p></div>
 </div></section>
-<section class="sec sec--night"><div class="wrap"><h2 class="h-lg" data-reveal>Designed, developed and <span class="serif">manufactured in India.</span></h2>
+<section class="sec sec--night"><svg class="night-pcb" viewBox="0 0 600 300" preserveAspectRatio="xMidYMid slice" fill="none" aria-hidden="true"><path class="pcb-t" d="M0 70H120L160 110H300"/><path class="pcb-t" d="M0 190H90L130 150H300"/><path class="pcb-t" d="M600 60H470L430 100H340"/><path class="pcb-t" d="M600 200H500L460 160H340"/><path class="pcb-t" d="M210 0V60L250 100V130"/><path class="pcb-t" d="M390 300V230L350 190V170"/><path class="pcb-t" d="M0 260H210L250 220V175"/><path class="pcb-t" d="M600 130H480"/><path class="pcb-p" pathLength="100" d="M0 70H120L160 110H300" style="animation-delay:0.00s"/><path class="pcb-p" pathLength="100" d="M0 190H90L130 150H300" style="animation-delay:-0.61s"/><path class="pcb-p" pathLength="100" d="M600 60H470L430 100H340" style="animation-delay:-1.22s"/><path class="pcb-p" pathLength="100" d="M600 200H500L460 160H340" style="animation-delay:-1.83s"/><path class="pcb-p" pathLength="100" d="M210 0V60L250 100V130" style="animation-delay:-2.44s"/><path class="pcb-p" pathLength="100" d="M390 300V230L350 190V170" style="animation-delay:-3.05s"/><path class="pcb-p" pathLength="100" d="M0 260H210L250 220V175" style="animation-delay:-3.66s"/><path class="pcb-p" pathLength="100" d="M600 130H480" style="animation-delay:-4.27s"/><rect class="pcb-c" x="250" y="100" width="100" height="100" rx="8"/><rect class="pcb-c" x="60" y="30" width="44" height="26" rx="4"/><rect class="pcb-c" x="500" y="176" width="52" height="30" rx="4"/></svg><div class="wrap"><h2 class="h-lg" data-reveal>Designed, developed and <span class="serif">manufactured in India.</span></h2>
   <p class="lede" style="color:rgb(226 240 248 / .85);margin-top:1rem" data-reveal>Our chargers and PCBs are designed, engineered and manufactured in-house, with 18 built-in safety features and firmware that updates over the cloud.</p></div></section>
 <section class="sec"><div class="wrap"><h2 class="h-lg" style="margin-bottom:1.6rem">How we work</h2><div class="grid-4">
-  <article class="tile" data-reveal style="--d:0"><h3>Fast charging</h3><p>Rapid-mobility fast-charging solutions.</p></article><article class="tile" data-reveal style="--d:1"><h3>Good management</h3><p>Managing EV charging with a focus on innovation.</p></article><article class="tile" data-reveal style="--d:2"><h3>Renewable energy</h3><p>Charging EVs with renewable power.</p></article><article class="tile" data-reveal style="--d:3"><h3>Quality chargers</h3><p>Precision engineering focused on quality.</p></article>
+  <article class="tile" data-spot data-reveal style="--d:0"><h3>Fast charging</h3><p>Rapid-mobility fast-charging solutions.</p></article><article class="tile" data-spot data-reveal style="--d:1"><h3>Good management</h3><p>Managing EV charging with a focus on innovation.</p></article><article class="tile" data-spot data-reveal style="--d:2"><h3>Renewable energy</h3><p>Charging EVs with renewable power.</p></article><article class="tile" data-spot data-reveal style="--d:3"><h3>Quality chargers</h3><p>Precision engineering focused on quality.</p></article>
 </div>
-<h2 class="h-lg" style="margin:clamp(3rem,8vh,5rem) 0 1rem">Leadership</h2><ul class="team"><li><strong>Virender Arora</strong><span>CEO</span></li><li><strong>Pramod Kapoor</strong><span>CTO</span></li><li><strong>Daizy Malhotra</strong><span>CSA</span></li><li><strong>Tushar Garg</strong><span>CMO</span></li><li><strong>Akshat Gupta</strong><span>Head of Marketing</span></li></ul>
+<h2 class="h-lg" style="margin:clamp(3rem,8vh,5rem) 0 1rem">Leadership</h2><ul class="team"><li><strong data-roll>Virender Arora</strong><span>CEO</span></li><li><strong data-roll>Pramod Kapoor</strong><span>CTO</span></li><li><strong data-roll>Daizy Malhotra</strong><span>CSA</span></li><li><strong data-roll>Tushar Garg</strong><span>CMO</span></li><li><strong data-roll>Akshat Gupta</strong><span>Head of Marketing</span></li></ul>
 <p style="margin-top:2.5rem"><a class="btn btn--ink" href="../contact-us/">Talk to the team</a></p></div></section>
 </main>
 <footer class="foot">

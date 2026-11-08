@@ -12,7 +12,8 @@
 <link rel="preload" href="../assets/fonts/archivo-wdth.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/css/scroll-kit.css">
 <link rel="stylesheet" href="../assets/css/site.css">
-<script>(function(){var d=document.documentElement;d.classList.add('js');try{var q=new URLSearchParams(location.search);if(!matchMedia('(prefers-reduced-motion: reduce)').matches&&!q.has('nointro')&&(q.has('intro')||!sessionStorage.getItem('reach-intro')))d.classList.add('show-intro')}catch(e){}})();</script>
+<link rel="stylesheet" href="../assets/css/fx.css">
+<script>(function(){var d=document.documentElement;d.classList.add('js');try{var q=new URLSearchParams(location.search);if(!matchMedia('(prefers-reduced-motion: reduce)').matches&&!q.has('nointro')&&(q.has('intro')||!sessionStorage.getItem('reach-intro')))d.classList.add('show-intro')}catch(e){}setTimeout(function(){d.classList.add('hero-ready')},d.classList.contains('show-intro')?660:30);})();</script>
 
 </head>
 <body>
@@ -27,13 +28,16 @@
       <a data-dock-item href="../use-case/">Use Cases</a>
       <div class="has-menu"><button data-dock-item type="button" aria-expanded="false" aria-haspopup="true">Products <svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M1 3l4 4 4-4"/></svg></button>
         <div class="menu">
-          <a href="../products/">All products <small>21</small></a>
-          <a href="../ac-chargers-1/">AC Chargers <small>3.3 to 22 kW</small></a>
-          <a href="../dc-chargers-2/">DC Fast Chargers <small>15 to 360 kW</small></a>
-          <a href="../portable-ev-chargers/">Portable Chargers <small>3.7 to 22 kW</small></a>
-          <a href="../ev-components/">EV Components <small>2W and 3W</small></a>
-          <a href="../customised-canopy-solutions/">Customised Canopy <small>Made to order</small></a>
-          <a href="../qix-cms/">QiX CMS <small>Software</small></a>
+          <div class="menu__list">
+          <a data-view="0" href="../products/">All products <small>21</small></a>
+          <a data-view="1" href="../ac-chargers-1/">AC Chargers <small>3.3 to 22 kW</small></a>
+          <a data-view="2" href="../dc-chargers-2/">DC Fast Chargers <small>15 to 360 kW</small></a>
+          <a data-view="3" href="../portable-ev-chargers/">Portable Chargers <small>3.7 to 22 kW</small></a>
+          <a data-view="4" href="../ev-components/">EV Components <small>2W and 3W</small></a>
+          <a data-view="5" href="../customised-canopy-solutions/">Customised Canopy <small>Made to order</small></a>
+          <a data-view="6" href="../qix-cms/">QiX CMS <small>Software</small></a>
+          </div>
+          <div class="menu__view" aria-hidden="true"><div class="mv on"><img data-src="../assets/img/products/dc-60-kw-ccs2-x2-ac-22-kw-type-2-ev-triple-gun-combination-charger.webp" alt=""></div><div class="mv"><img data-src="../assets/img/products/22-kw-type-2-dual-gun-ac-ev-charger.webp" alt=""></div><div class="mv"><img data-src="../assets/img/charger-dual.webp" alt=""></div><div class="mv mv--mult"><img data-src="../assets/img/products/22-kw-type-2-portable-ev-charger.webp" alt=""></div><div class="mv"><img data-src="../assets/img/products/vehicle-control-unit-vcu-for-2w-and-3w.webp" alt=""></div><div class="mv"><img data-src="../assets/img/products/canopy-manufacturing.webp" alt=""></div><div class="mv"><p class="mv__txt">Scan.<br>Pay.<br>Charge.</p></div></div>
         </div>
       </div>
       <a data-dock-item href="../faq/">FAQs</a>
@@ -48,12 +52,17 @@
   </div>
 </header>
 <main id="main">
-<section class="page-head"><div class="wrap">
+<section class="page-head"><canvas class="dither" data-dither data-px="4" data-colors="#06182A,#0A2C46,#0D4565,#0F6895" aria-hidden="true"></canvas><div class="wrap">
   <ol class="crumbs"><li><a href="../">Home</a></li><li>Become a Dealer</li></ol>
   <h1 class="h-lg">India is going electric. <span class="serif">Grow with it.</span></h1><p class="lede">REACH is expanding its dealer and distributor network across India. We are looking for ambitious partners who want to build a future-ready business.</p>
 </div></section>
-<section class="sec"><div class="wrap"><h2 class="h-lg" style="margin-bottom:1.6rem">Why partner with REACH</h2><div class="grid-4" style="grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr))">
-  <article class="tile" data-reveal style="--d:0"><h3>Made in India</h3><p>Designed, developed and manufactured in India.</p></article><article class="tile" data-reveal style="--d:1"><h3>Complete AC portfolio</h3><p>3.3 kW to 22 kW AC chargers to offer your customers.</p></article><article class="tile" data-reveal style="--d:2"><h3>Strong support</h3><p>Technical and after-sales support behind every sale.</p></article><article class="tile" data-reveal style="--d:0"><h3>Marketing help</h3><p>Marketing and business development assistance.</p></article><article class="tile" data-reveal style="--d:1"><h3>Room to grow</h3><p>Attractive business opportunities and growth potential.</p></article><article class="tile" data-reveal style="--d:2"><h3>Expert backing</h3><p>Backed by Tech Green Innovations, experts in EV charging technology.</p></article>
+<section class="sec"><div class="wrap"><h2 class="h-lg" style="margin-bottom:1.6rem">Why partner with REACH</h2><div class="bento">
+  <article class="tile tile--wide tile--dark" data-reveal><div class="bento__art" aria-hidden="true"><svg class="" viewBox="0 0 600 300" preserveAspectRatio="xMidYMid slice" fill="none" aria-hidden="true"><path class="pcb-t" d="M0 70H120L160 110H300"/><path class="pcb-t" d="M0 190H90L130 150H300"/><path class="pcb-t" d="M600 60H470L430 100H340"/><path class="pcb-t" d="M600 200H500L460 160H340"/><path class="pcb-t" d="M210 0V60L250 100V130"/><path class="pcb-t" d="M390 300V230L350 190V170"/><path class="pcb-t" d="M0 260H210L250 220V175"/><path class="pcb-t" d="M600 130H480"/><path class="pcb-p" pathLength="100" d="M0 70H120L160 110H300" style="animation-delay:0.00s"/><path class="pcb-p" pathLength="100" d="M0 190H90L130 150H300" style="animation-delay:-0.61s"/><path class="pcb-p" pathLength="100" d="M600 60H470L430 100H340" style="animation-delay:-1.22s"/><path class="pcb-p" pathLength="100" d="M600 200H500L460 160H340" style="animation-delay:-1.83s"/><path class="pcb-p" pathLength="100" d="M210 0V60L250 100V130" style="animation-delay:-2.44s"/><path class="pcb-p" pathLength="100" d="M390 300V230L350 190V170" style="animation-delay:-3.05s"/><path class="pcb-p" pathLength="100" d="M0 260H210L250 220V175" style="animation-delay:-3.66s"/><path class="pcb-p" pathLength="100" d="M600 130H480" style="animation-delay:-4.27s"/><rect class="pcb-c" x="250" y="100" width="100" height="100" rx="8"/><rect class="pcb-c" x="60" y="30" width="44" height="26" rx="4"/><rect class="pcb-c" x="500" y="176" width="52" height="30" rx="4"/></svg></div><h3>Made in India</h3><p>Designed, developed and manufactured in India.</p></article>
+  <article class="tile tile--wide" data-reveal style="--d:1"><div class="bento__art" aria-hidden="true"><div class="kw-bars"><div style="--v:11.7%;--i:0"><i></i>3.3</div><div style="--v:26.236363636363638%;--i:1"><i></i>7.4</div><div style="--v:39%;--i:2"><i></i>11</div><div style="--v:53.18181818181818%;--i:3"><i></i>15</div><div style="--v:78%;--i:4"><i></i>22</div></div></div><h3>Complete AC portfolio</h3><p>3.3 kW to 22 kW AC chargers to offer your customers.</p></article>
+  <article class="tile" data-spot data-reveal><svg class="line-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 14v-3a8 8 0 0 1 16 0v3"/><rect x="2.5" y="13" width="4" height="6" rx="1.5"/><rect x="17.5" y="13" width="4" height="6" rx="1.5"/><path d="M19.5 19c0 2-2 3-5 3"/></svg><h3>Strong support</h3><p>Technical and after-sales support behind every sale.</p></article>
+  <article class="tile" data-spot data-reveal style="--d:1"><svg class="line-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10v4l13 5V5z"/><path d="M16 9a3 3 0 0 1 0 6"/><path d="M7 15.5V20h3v-3.3"/></svg><h3>Marketing help</h3><p>Marketing and business development assistance.</p></article>
+  <article class="tile" data-spot data-reveal style="--d:2"><svg class="line-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20h18"/><path d="M4 16l5-5 4 3 7-8"/><path d="M15 6h5v5"/></svg><h3>Room to grow</h3><p>Attractive business opportunities and growth potential.</p></article>
+  <article class="tile tile--dark" data-reveal style="--d:3"><img class="tgi" src="../assets/img/logo-tgi.webp" alt="" width="400" height="150" loading="lazy" style="margin-bottom:auto"><h3>Expert backing</h3><p>Backed by Tech Green Innovations, experts in EV charging technology.</p></article>
 </div></div></section>
 <section class="sec sec--ice" id="apply"><div class="wrap grid-2">
   <div><h2 class="h-lg">Apply <span class="serif">to join</span></h2><p class="lede" style="margin-top:1rem">For distributors, electrical solutions providers, EPC contractors, system integrators, EV ecosystem players and entrepreneurs.</p></div>

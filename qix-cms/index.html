@@ -12,7 +12,8 @@
 <link rel="preload" href="../assets/fonts/archivo-wdth.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/css/scroll-kit.css">
 <link rel="stylesheet" href="../assets/css/site.css">
-<script>(function(){var d=document.documentElement;d.classList.add('js');try{var q=new URLSearchParams(location.search);if(!matchMedia('(prefers-reduced-motion: reduce)').matches&&!q.has('nointro')&&(q.has('intro')||!sessionStorage.getItem('reach-intro')))d.classList.add('show-intro')}catch(e){}})();</script>
+<link rel="stylesheet" href="../assets/css/fx.css">
+<script>(function(){var d=document.documentElement;d.classList.add('js');try{var q=new URLSearchParams(location.search);if(!matchMedia('(prefers-reduced-motion: reduce)').matches&&!q.has('nointro')&&(q.has('intro')||!sessionStorage.getItem('reach-intro')))d.classList.add('show-intro')}catch(e){}setTimeout(function(){d.classList.add('hero-ready')},d.classList.contains('show-intro')?660:30);})();</script>
 
 </head>
 <body>
@@ -27,13 +28,16 @@
       <a data-dock-item href="../use-case/">Use Cases</a>
       <div class="has-menu"><button data-dock-item type="button" aria-expanded="false" aria-haspopup="true" aria-current="true">Products <svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M1 3l4 4 4-4"/></svg></button>
         <div class="menu">
-          <a href="../products/">All products <small>21</small></a>
-          <a href="../ac-chargers-1/">AC Chargers <small>3.3 to 22 kW</small></a>
-          <a href="../dc-chargers-2/">DC Fast Chargers <small>15 to 360 kW</small></a>
-          <a href="../portable-ev-chargers/">Portable Chargers <small>3.7 to 22 kW</small></a>
-          <a href="../ev-components/">EV Components <small>2W and 3W</small></a>
-          <a href="../customised-canopy-solutions/">Customised Canopy <small>Made to order</small></a>
-          <a href="../qix-cms/">QiX CMS <small>Software</small></a>
+          <div class="menu__list">
+          <a data-view="0" href="../products/">All products <small>21</small></a>
+          <a data-view="1" href="../ac-chargers-1/">AC Chargers <small>3.3 to 22 kW</small></a>
+          <a data-view="2" href="../dc-chargers-2/">DC Fast Chargers <small>15 to 360 kW</small></a>
+          <a data-view="3" href="../portable-ev-chargers/">Portable Chargers <small>3.7 to 22 kW</small></a>
+          <a data-view="4" href="../ev-components/">EV Components <small>2W and 3W</small></a>
+          <a data-view="5" href="../customised-canopy-solutions/">Customised Canopy <small>Made to order</small></a>
+          <a data-view="6" href="../qix-cms/">QiX CMS <small>Software</small></a>
+          </div>
+          <div class="menu__view" aria-hidden="true"><div class="mv on"><img data-src="../assets/img/products/dc-60-kw-ccs2-x2-ac-22-kw-type-2-ev-triple-gun-combination-charger.webp" alt=""></div><div class="mv"><img data-src="../assets/img/products/22-kw-type-2-dual-gun-ac-ev-charger.webp" alt=""></div><div class="mv"><img data-src="../assets/img/charger-dual.webp" alt=""></div><div class="mv mv--mult"><img data-src="../assets/img/products/22-kw-type-2-portable-ev-charger.webp" alt=""></div><div class="mv"><img data-src="../assets/img/products/vehicle-control-unit-vcu-for-2w-and-3w.webp" alt=""></div><div class="mv"><img data-src="../assets/img/products/canopy-manufacturing.webp" alt=""></div><div class="mv"><p class="mv__txt">Scan.<br>Pay.<br>Charge.</p></div></div>
         </div>
       </div>
       <a data-dock-item href="../faq/">FAQs</a>
@@ -48,15 +52,24 @@
   </div>
 </header>
 <main id="main">
-<section class="page-head"><div class="wrap">
+<section class="page-head"><canvas class="dither" data-dither data-px="4" data-colors="#06182A,#0A2C46,#0D4565,#0F6895" aria-hidden="true"></canvas><div class="wrap">
   <ol class="crumbs"><li><a href="../">Home</a></li><li>QiX CMS</li></ol>
   <h1 class="h-lg">Charging as simple as <span class="serif">a digital payment</span></h1><p class="lede">QiX CMS by Tech Green Innovations. No app download, no registration hassles, no complex process.</p>
 </div></section>
-<section class="sec"><div class="wrap"><div class="steps">
-  <article class="step" data-reveal><b>1</b><div><h3>Scan the QR code</h3><p>At the charger, with any phone camera.</p></div></article>
-  <article class="step" data-reveal style="--d:1"><b>2</b><div><h3>Pay instantly</h3><p>UPI, net banking, credit card, debit card, wallets and more.</p></div></article>
-  <article class="step" data-reveal style="--d:2"><b>3</b><div><h3>Start charging</h3><p>That is the whole process.</p></div></article>
-</div><p style="margin-top:2.5rem"><a class="btn btn--ink" href="../contact-us/?product=QiX%20CMS#quote">Ask about QiX CMS</a></p></div></section>
+<section class="qix" data-qix aria-label="How QiX works"><div class="qix__stage">
+  <div class="qx-steps">
+    <article class="qx-step on"><b>1 of 3</b><h2>Scan the <span class="serif">QR code.</span></h2><p>At the charger, with any phone camera.</p></article>
+    <article class="qx-step"><b>2 of 3</b><h2>Pay <span class="serif">instantly.</span></h2><p>UPI, net banking, credit card, debit card, wallets and more.</p></article>
+    <article class="qx-step"><b>3 of 3</b><h2>Start <span class="serif">charging.</span></h2><p>That is the whole process.</p></article>
+  </div>
+  <div class="phone" aria-hidden="true"><div class="phone__in">
+    <div class="scr scr--scan on"><div class="scan"><svg viewBox="0 0 25 25" fill="#0A1F2E" shape-rendering="crispEdges" aria-hidden="true"><path d="M10 0h1v1h-1zM11 0h1v1h-1zM12 0h1v1h-1zM13 0h1v1h-1zM14 0h1v1h-1zM15 0h1v1h-1zM16 0h1v1h-1zM9 1h1v1h-1zM14 1h1v1h-1zM15 1h1v1h-1zM8 2h1v1h-1zM9 2h1v1h-1zM14 2h1v1h-1zM15 2h1v1h-1zM16 2h1v1h-1zM8 3h1v1h-1zM10 3h1v1h-1zM13 3h1v1h-1zM14 3h1v1h-1zM8 4h1v1h-1zM10 4h1v1h-1zM11 4h1v1h-1zM14 4h1v1h-1zM15 4h1v1h-1zM16 4h1v1h-1zM8 5h1v1h-1zM9 5h1v1h-1zM12 5h1v1h-1zM14 5h1v1h-1zM15 5h1v1h-1zM8 6h1v1h-1zM9 6h1v1h-1zM10 6h1v1h-1zM11 6h1v1h-1zM15 6h1v1h-1zM11 7h1v1h-1zM12 7h1v1h-1zM13 7h1v1h-1zM15 7h1v1h-1zM16 7h1v1h-1zM2 8h1v1h-1zM4 8h1v1h-1zM7 8h1v1h-1zM8 8h1v1h-1zM10 8h1v1h-1zM12 8h1v1h-1zM13 8h1v1h-1zM15 8h1v1h-1zM16 8h1v1h-1zM18 8h1v1h-1zM19 8h1v1h-1zM23 8h1v1h-1zM24 8h1v1h-1zM0 9h1v1h-1zM5 9h1v1h-1zM9 9h1v1h-1zM11 9h1v1h-1zM14 9h1v1h-1zM15 9h1v1h-1zM16 9h1v1h-1zM17 9h1v1h-1zM18 9h1v1h-1zM19 9h1v1h-1zM20 9h1v1h-1zM23 9h1v1h-1zM1 10h1v1h-1zM5 10h1v1h-1zM9 10h1v1h-1zM11 10h1v1h-1zM12 10h1v1h-1zM13 10h1v1h-1zM17 10h1v1h-1zM20 10h1v1h-1zM23 10h1v1h-1zM24 10h1v1h-1zM8 11h1v1h-1zM10 11h1v1h-1zM12 11h1v1h-1zM14 11h1v1h-1zM15 11h1v1h-1zM18 11h1v1h-1zM20 11h1v1h-1zM21 11h1v1h-1zM22 11h1v1h-1zM0 12h1v1h-1zM1 12h1v1h-1zM2 12h1v1h-1zM3 12h1v1h-1zM5 12h1v1h-1zM7 12h1v1h-1zM9 12h1v1h-1zM12 12h1v1h-1zM13 12h1v1h-1zM14 12h1v1h-1zM19 12h1v1h-1zM20 12h1v1h-1zM21 12h1v1h-1zM22 12h1v1h-1zM23 12h1v1h-1zM0 13h1v1h-1zM2 13h1v1h-1zM4 13h1v1h-1zM7 13h1v1h-1zM8 13h1v1h-1zM12 13h1v1h-1zM13 13h1v1h-1zM14 13h1v1h-1zM16 13h1v1h-1zM17 13h1v1h-1zM19 13h1v1h-1zM20 13h1v1h-1zM22 13h1v1h-1zM24 13h1v1h-1zM0 14h1v1h-1zM1 14h1v1h-1zM5 14h1v1h-1zM7 14h1v1h-1zM8 14h1v1h-1zM11 14h1v1h-1zM13 14h1v1h-1zM14 14h1v1h-1zM16 14h1v1h-1zM22 14h1v1h-1zM23 14h1v1h-1zM24 14h1v1h-1zM1 15h1v1h-1zM5 15h1v1h-1zM6 15h1v1h-1zM9 15h1v1h-1zM10 15h1v1h-1zM14 15h1v1h-1zM15 15h1v1h-1zM18 15h1v1h-1zM19 15h1v1h-1zM20 15h1v1h-1zM22 15h1v1h-1zM24 15h1v1h-1zM0 16h1v1h-1zM3 16h1v1h-1zM4 16h1v1h-1zM7 16h1v1h-1zM8 16h1v1h-1zM10 16h1v1h-1zM13 16h1v1h-1zM14 16h1v1h-1zM16 16h1v1h-1zM18 16h1v1h-1zM20 16h1v1h-1zM21 16h1v1h-1zM22 16h1v1h-1zM24 16h1v1h-1zM9 17h1v1h-1zM10 17h1v1h-1zM11 17h1v1h-1zM12 17h1v1h-1zM14 17h1v1h-1zM16 17h1v1h-1zM19 17h1v1h-1zM20 17h1v1h-1zM22 17h1v1h-1zM23 17h1v1h-1zM8 18h1v1h-1zM9 18h1v1h-1zM10 18h1v1h-1zM11 18h1v1h-1zM12 18h1v1h-1zM15 18h1v1h-1zM17 18h1v1h-1zM18 18h1v1h-1zM19 18h1v1h-1zM20 18h1v1h-1zM23 18h1v1h-1zM24 18h1v1h-1zM11 19h1v1h-1zM12 19h1v1h-1zM17 19h1v1h-1zM18 19h1v1h-1zM20 19h1v1h-1zM21 19h1v1h-1zM22 19h1v1h-1zM23 19h1v1h-1zM24 19h1v1h-1zM9 20h1v1h-1zM13 20h1v1h-1zM20 20h1v1h-1zM21 20h1v1h-1zM8 21h1v1h-1zM9 21h1v1h-1zM10 21h1v1h-1zM12 21h1v1h-1zM14 21h1v1h-1zM15 21h1v1h-1zM16 21h1v1h-1zM17 21h1v1h-1zM18 21h1v1h-1zM20 21h1v1h-1zM21 21h1v1h-1zM22 21h1v1h-1zM23 21h1v1h-1zM24 21h1v1h-1zM9 22h1v1h-1zM14 22h1v1h-1zM17 22h1v1h-1zM18 22h1v1h-1zM20 22h1v1h-1zM22 22h1v1h-1zM24 22h1v1h-1zM8 23h1v1h-1zM9 23h1v1h-1zM10 23h1v1h-1zM18 23h1v1h-1zM22 23h1v1h-1zM8 24h1v1h-1zM9 24h1v1h-1zM10 24h1v1h-1zM13 24h1v1h-1zM14 24h1v1h-1zM18 24h1v1h-1zM20 24h1v1h-1zM21 24h1v1h-1zM22 24h1v1h-1zM23 24h1v1h-1z"/><rect x="0" y="0" width="7" height="7" rx="1"/><rect x="1" y="1" width="5" height="5" rx=".6" fill="#fff"/><rect x="2" y="2" width="3" height="3" rx=".4"/><rect x="18" y="0" width="7" height="7" rx="1"/><rect x="19" y="1" width="5" height="5" rx=".6" fill="#fff"/><rect x="20" y="2" width="3" height="3" rx=".4"/><rect x="0" y="18" width="7" height="7" rx="1"/><rect x="1" y="19" width="5" height="5" rx=".6" fill="#fff"/><rect x="2" y="20" width="3" height="3" rx=".4"/></svg></div><h3>Point your camera at the charger</h3></div>
+    <div class="scr"><h3>Choose how to pay</h3><ul class="pay"><li class="sel">UPI</li><li>Net Banking</li><li>Credit Card</li><li>Debit Card</li><li>Wallets</li></ul><div class="scr__btn">Pay and start</div></div>
+    <div class="scr scr--charge"><div class="ring-wrap"><div class="scr__ring"></div><div class="ring-num"><span data-qix-pct>0</span><small>%</small></div></div><h3>Charging</h3></div>
+  </div></div>
+  <p class="qix__note">Illustration of the QiX flow.</p>
+</div></section>
+<section class="sec"><div class="wrap"><a class="btn btn--ink" href="../contact-us/?product=QiX%20CMS#quote">Ask about QiX CMS</a></div></section>
 </main>
 <footer class="foot">
   <div class="wrap foot__grid">

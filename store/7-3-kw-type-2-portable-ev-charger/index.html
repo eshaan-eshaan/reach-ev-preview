@@ -12,7 +12,8 @@
 <link rel="preload" href="../../assets/fonts/archivo-wdth.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../../assets/css/scroll-kit.css">
 <link rel="stylesheet" href="../../assets/css/site.css">
-<script>(function(){var d=document.documentElement;d.classList.add('js');try{var q=new URLSearchParams(location.search);if(!matchMedia('(prefers-reduced-motion: reduce)').matches&&!q.has('nointro')&&(q.has('intro')||!sessionStorage.getItem('reach-intro')))d.classList.add('show-intro')}catch(e){}})();</script>
+<link rel="stylesheet" href="../../assets/css/fx.css">
+<script>(function(){var d=document.documentElement;d.classList.add('js');try{var q=new URLSearchParams(location.search);if(!matchMedia('(prefers-reduced-motion: reduce)').matches&&!q.has('nointro')&&(q.has('intro')||!sessionStorage.getItem('reach-intro')))d.classList.add('show-intro')}catch(e){}setTimeout(function(){d.classList.add('hero-ready')},d.classList.contains('show-intro')?660:30);})();</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -26,13 +27,16 @@
       <a data-dock-item href="../../use-case/">Use Cases</a>
       <div class="has-menu"><button data-dock-item type="button" aria-expanded="false" aria-haspopup="true" aria-current="true">Products <svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M1 3l4 4 4-4"/></svg></button>
         <div class="menu">
-          <a href="../../products/">All products <small>21</small></a>
-          <a href="../../ac-chargers-1/">AC Chargers <small>3.3 to 22 kW</small></a>
-          <a href="../../dc-chargers-2/">DC Fast Chargers <small>15 to 360 kW</small></a>
-          <a href="../../portable-ev-chargers/">Portable Chargers <small>3.7 to 22 kW</small></a>
-          <a href="../../ev-components/">EV Components <small>2W and 3W</small></a>
-          <a href="../../customised-canopy-solutions/">Customised Canopy <small>Made to order</small></a>
-          <a href="../../qix-cms/">QiX CMS <small>Software</small></a>
+          <div class="menu__list">
+          <a data-view="0" href="../../products/">All products <small>21</small></a>
+          <a data-view="1" href="../../ac-chargers-1/">AC Chargers <small>3.3 to 22 kW</small></a>
+          <a data-view="2" href="../../dc-chargers-2/">DC Fast Chargers <small>15 to 360 kW</small></a>
+          <a data-view="3" href="../../portable-ev-chargers/">Portable Chargers <small>3.7 to 22 kW</small></a>
+          <a data-view="4" href="../../ev-components/">EV Components <small>2W and 3W</small></a>
+          <a data-view="5" href="../../customised-canopy-solutions/">Customised Canopy <small>Made to order</small></a>
+          <a data-view="6" href="../../qix-cms/">QiX CMS <small>Software</small></a>
+          </div>
+          <div class="menu__view" aria-hidden="true"><div class="mv on"><img data-src="../../assets/img/products/dc-60-kw-ccs2-x2-ac-22-kw-type-2-ev-triple-gun-combination-charger.webp" alt=""></div><div class="mv"><img data-src="../../assets/img/products/22-kw-type-2-dual-gun-ac-ev-charger.webp" alt=""></div><div class="mv"><img data-src="../../assets/img/charger-dual.webp" alt=""></div><div class="mv mv--mult"><img data-src="../../assets/img/products/22-kw-type-2-portable-ev-charger.webp" alt=""></div><div class="mv"><img data-src="../../assets/img/products/vehicle-control-unit-vcu-for-2w-and-3w.webp" alt=""></div><div class="mv"><img data-src="../../assets/img/products/canopy-manufacturing.webp" alt=""></div><div class="mv"><p class="mv__txt">Scan.<br>Pay.<br>Charge.</p></div></div>
         </div>
       </div>
       <a data-dock-item href="../../faq/">FAQs</a>
@@ -50,22 +54,22 @@
 <section class="sec" style="padding-top:calc(var(--nav-h) + 2.5rem)"><div class="wrap">
   <ol class="crumbs" style="color:var(--ink-2)"><li><a href="../../">Home</a></li><li><a href="../../products/">Products</a></li><li><a href="../../portable-ev-chargers/">Portable Chargers</a></li></ol>
   <div class="pdp">
-    <div class="pdp__stage is-white"><img src="../../assets/img/products/7-3-kw-type-2-portable-ev-charger.webp" alt="7.3 kW Portable Charger" width="760" height="760"></div>
+    <div class="pdp__stage is-white" data-tilt="4"><img src="../../assets/img/products/7-3-kw-type-2-portable-ev-charger.webp" alt="7.3 kW Portable Charger" width="760" height="760"></div>
     <div>
       <h1 class="pdp__title">REACH 7.3 kW Type-2 Portable EV Charger</h1>
       <p class="pdp__price">₹18,666<small>Listed price</small></p>
       <div class="btns"><a class="btn btn--ink" href="../../contact-us/?product=7.3%20kW%20Portable%20Charger#quote">Get a Quote</a><a class="btn btn--line" href="https://reachev.in/wp-content/uploads/2024/07/7.3-kW-Portable-charger_11zon.pdf" rel="noopener">Download datasheet</a></div>
-      <dl class="specs"><div><dt>Power</dt><dd>7.3 kW</dd></div><div><dt>Connector</dt><dd>Type-2</dd></div><div><dt>Protection</dt><dd>IP65</dd></div><div><dt>Warranty</dt><dd>12 Months</dd></div></dl>
+      <section class="pass" aria-label="Specifications"><div class="pass__route"><div><small>From</small><b>Grid</b></div><div class="pass__line"><span>7.3 kW</span></div><div><small>To</small><b>Battery</b></div></div><div class="pass__tear"></div><dl class="pass__grid"><div><dt><small>Connector</small></dt><dd>Type-2</dd></div><div><dt><small>Protection</small></dt><dd>IP65</dd></div><div><dt><small>Warranty</small></dt><dd>12 Months</dd></div></dl></section>
       <p style="color:var(--ink-2);margin-bottom:1.2rem">With REACH 7.3 kW Portable EV Charger, experience the freedom to charge your Type-2 compatible EV from any outlet, with a powerful 7.3 kW output that adds more range in less time. The universal IEC 62196-2 connector ensures seamless compatibility. Built for durability, the compact design features a wear-resistant TPU sheath cable and an IP66-rated shell for worry-free charging in any weather. Unwavering safety comes standard with overheating protection, safeguarding your vehicle and providing peace of mind on every journey.</p>
       <ul class="feat"><li>User Interface- Adopt a bright and smooth panel design with built-in LCD display and LED indicators.</li><li><strong>Advanced Safety Suite</strong>Safety features like Overheating protection mechanism, Over Voltage, Over Current, Earthing Protection, Short Circuit Protection ensure the electric vehicle is safeguarded during charging.</li><li><strong>All-Weather Durability</strong>IP65-rated weatherproof quality to withstand the elements for reliable outdoor charging.</li><li>Mechanical Lifespan of over 10,000 mating cycles to guarantee a long and reliable charging experience.</li><li><strong>Built to Last</strong>The TPU sheath cable ensures a long-lasting and worry-free charging experience.</li></ul>
     </div>
   </div>
-  <h2 class="h-md" style="margin:clamp(3rem,8vh,5rem) 0 1.2rem">Also in Portable Chargers</h2><div class="cards"><a class="card" href="../../store/3-7-kw-type-2-portable-ev-charger/" data-cat="portable">
-  <div class="card__img is-white"><img src="../../assets/img/products/3-7-kw-type-2-portable-ev-charger.webp" alt="3.7 kW Portable Charger" width="760" height="760" loading="lazy"></div>
-  <div class="card__body"><span class="card__kw">3.7 kW</span><h3>3.7 kW Portable Charger</h3><span class="card__price">₹16,666</span></div></a><a class="card" href="../../store/11-kw-type-2-portable-ev-charger/" data-cat="portable">
-  <div class="card__img is-white"><img src="../../assets/img/products/11-kw-type-2-portable-ev-charger.webp" alt="11 kW Portable Charger" width="760" height="760" loading="lazy"></div>
-  <div class="card__body"><span class="card__kw">11 kW</span><h3>11 kW Portable Charger</h3><span class="card__price">₹24,444</span></div></a><a class="card" href="../../store/22-kw-type-2-portable-ev-charger/" data-cat="portable">
-  <div class="card__img is-white"><img src="../../assets/img/products/22-kw-type-2-portable-ev-charger.webp" alt="22 kW Portable Charger" width="760" height="760" loading="lazy"></div>
+  <h2 class="h-md" style="margin:clamp(3rem,8vh,5rem) 0 1.2rem">Also in Portable Chargers</h2><div class="cards"><a class="card" href="../../store/3-7-kw-type-2-portable-ev-charger/" data-cat="portable" data-tilt="5" data-spot>
+  <div class="card__img is-white"><span class="card__ghost" aria-hidden="true">3.7</span><img src="../../assets/img/products/3-7-kw-type-2-portable-ev-charger.webp" alt="3.7 kW Portable Charger" width="760" height="760" loading="lazy"></div>
+  <div class="card__body"><span class="card__kw">3.7 kW</span><h3>3.7 kW Portable Charger</h3><span class="card__price">₹16,666</span></div></a><a class="card" href="../../store/11-kw-type-2-portable-ev-charger/" data-cat="portable" data-tilt="5" data-spot>
+  <div class="card__img is-white"><span class="card__ghost" aria-hidden="true">11</span><img src="../../assets/img/products/11-kw-type-2-portable-ev-charger.webp" alt="11 kW Portable Charger" width="760" height="760" loading="lazy"></div>
+  <div class="card__body"><span class="card__kw">11 kW</span><h3>11 kW Portable Charger</h3><span class="card__price">₹24,444</span></div></a><a class="card" href="../../store/22-kw-type-2-portable-ev-charger/" data-cat="portable" data-tilt="5" data-spot>
+  <div class="card__img is-white"><span class="card__ghost" aria-hidden="true">22</span><img src="../../assets/img/products/22-kw-type-2-portable-ev-charger.webp" alt="22 kW Portable Charger" width="760" height="760" loading="lazy"></div>
   <div class="card__body"><span class="card__kw">22 kW</span><h3>22 kW Portable Charger</h3><span class="card__price">₹31,111</span></div></a></div>
 </div></section>
 </main>

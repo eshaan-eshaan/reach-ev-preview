@@ -168,7 +168,7 @@ export function initScrollKit({ cursor = false } = {}) {
     for (const job of scrubbers) job();
 
     const maxScroll = document.documentElement.scrollHeight - innerHeight;
-    root.style.setProperty('--page', (maxScroll > 0 ? clamp(scrollY / maxScroll) : 0).toFixed(4));
+    (nav?.querySelector('.batt') || root).style.setProperty('--page', (maxScroll > 0 ? clamp(scrollY / maxScroll) : 0).toFixed(4));
     if (nav) nav.classList.toggle('is-scrolled', scrollY > 40);
 
     for (const pin of pins) {

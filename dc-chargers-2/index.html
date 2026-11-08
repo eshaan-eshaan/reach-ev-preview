@@ -12,7 +12,8 @@
 <link rel="preload" href="../assets/fonts/archivo-wdth.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/css/scroll-kit.css">
 <link rel="stylesheet" href="../assets/css/site.css">
-<script>(function(){var d=document.documentElement;d.classList.add('js');try{var q=new URLSearchParams(location.search);if(!matchMedia('(prefers-reduced-motion: reduce)').matches&&!q.has('nointro')&&(q.has('intro')||!sessionStorage.getItem('reach-intro')))d.classList.add('show-intro')}catch(e){}})();</script>
+<link rel="stylesheet" href="../assets/css/fx.css">
+<script>(function(){var d=document.documentElement;d.classList.add('js');try{var q=new URLSearchParams(location.search);if(!matchMedia('(prefers-reduced-motion: reduce)').matches&&!q.has('nointro')&&(q.has('intro')||!sessionStorage.getItem('reach-intro')))d.classList.add('show-intro')}catch(e){}setTimeout(function(){d.classList.add('hero-ready')},d.classList.contains('show-intro')?660:30);})();</script>
 
 </head>
 <body>
@@ -27,13 +28,16 @@
       <a data-dock-item href="../use-case/">Use Cases</a>
       <div class="has-menu"><button data-dock-item type="button" aria-expanded="false" aria-haspopup="true" aria-current="true">Products <svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M1 3l4 4 4-4"/></svg></button>
         <div class="menu">
-          <a href="../products/">All products <small>21</small></a>
-          <a href="../ac-chargers-1/">AC Chargers <small>3.3 to 22 kW</small></a>
-          <a href="../dc-chargers-2/">DC Fast Chargers <small>15 to 360 kW</small></a>
-          <a href="../portable-ev-chargers/">Portable Chargers <small>3.7 to 22 kW</small></a>
-          <a href="../ev-components/">EV Components <small>2W and 3W</small></a>
-          <a href="../customised-canopy-solutions/">Customised Canopy <small>Made to order</small></a>
-          <a href="../qix-cms/">QiX CMS <small>Software</small></a>
+          <div class="menu__list">
+          <a data-view="0" href="../products/">All products <small>21</small></a>
+          <a data-view="1" href="../ac-chargers-1/">AC Chargers <small>3.3 to 22 kW</small></a>
+          <a data-view="2" href="../dc-chargers-2/">DC Fast Chargers <small>15 to 360 kW</small></a>
+          <a data-view="3" href="../portable-ev-chargers/">Portable Chargers <small>3.7 to 22 kW</small></a>
+          <a data-view="4" href="../ev-components/">EV Components <small>2W and 3W</small></a>
+          <a data-view="5" href="../customised-canopy-solutions/">Customised Canopy <small>Made to order</small></a>
+          <a data-view="6" href="../qix-cms/">QiX CMS <small>Software</small></a>
+          </div>
+          <div class="menu__view" aria-hidden="true"><div class="mv on"><img data-src="../assets/img/products/dc-60-kw-ccs2-x2-ac-22-kw-type-2-ev-triple-gun-combination-charger.webp" alt=""></div><div class="mv"><img data-src="../assets/img/products/22-kw-type-2-dual-gun-ac-ev-charger.webp" alt=""></div><div class="mv"><img data-src="../assets/img/charger-dual.webp" alt=""></div><div class="mv mv--mult"><img data-src="../assets/img/products/22-kw-type-2-portable-ev-charger.webp" alt=""></div><div class="mv"><img data-src="../assets/img/products/vehicle-control-unit-vcu-for-2w-and-3w.webp" alt=""></div><div class="mv"><img data-src="../assets/img/products/canopy-manufacturing.webp" alt=""></div><div class="mv"><p class="mv__txt">Scan.<br>Pay.<br>Charge.</p></div></div>
         </div>
       </div>
       <a data-dock-item href="../faq/">FAQs</a>
@@ -48,22 +52,22 @@
   </div>
 </header>
 <main id="main">
-<section class="page-head"><div class="wrap">
+<section class="page-head"><canvas class="dither" data-dither data-px="4" data-colors="#06182A,#0A2C46,#0D4565,#0F6895" aria-hidden="true"></canvas><div class="wrap">
   <ol class="crumbs"><li><a href="../">Home</a></li><li><a href="../products/">Products</a></li><li>DC Fast Chargers</li></ol>
   <h1 class="h-lg">DC Fast Chargers</h1><p class="lede">CCS2 and Bharat-standard fast chargers for public sites, fleets and highways, with Dynamic Load Management, Power Optimisation and power you can upgrade.</p>
 </div></section>
 <section class="sec"><div class="wrap">
   <div class="filter"><a class="chip" href="../products/">All</a><a class="chip" href="../ac-chargers-1/">AC</a><a class="chip" href="../dc-chargers-2/" aria-current="page">DC</a><a class="chip" href="../portable-ev-chargers/">Portable</a><a class="chip" href="../ev-components/">Components</a><a class="chip" href="../customised-canopy-solutions/">Canopy</a></div>
-  <div class="cards"><a class="card" href="../store/gbt-dual-gun-dc-001-ev-fast-charger-15-kw-and-30-kw/" data-cat="dc">
-  <div class="card__img"><img src="../assets/img/products/gbt-dual-gun-dc-001-ev-fast-charger-15-kw-and-30-kw.webp" alt="GB/T DC 001 Fast Charger" width="851" height="507" loading="lazy"></div>
-  <div class="card__body"><span class="card__kw">15 to 30 kW</span><h3>GB/T DC 001 Fast Charger</h3><span class="card__price">₹3,77,555</span></div></a><a class="card" href="../store/single-gun-dc-ev-charger-20-kw-and-30-kw/" data-cat="dc">
-  <div class="card__img"><img src="../assets/img/products/single-gun-dc-ev-charger-20-kw-and-30-kw.webp" alt="CCS2 Single Gun DC Charger" width="501" height="551" loading="lazy"></div>
-  <div class="card__body"><span class="card__kw">20 to 30 kW</span><h3>CCS2 Single Gun DC Charger</h3><span class="card__price">₹3,99,333</span></div></a><a class="card" href="../store/dual-gun-dc-ev-charger-40-kw-to-360-kw/" data-cat="dc">
-  <div class="card__img"><img src="../assets/img/products/dual-gun-dc-ev-charger-40-kw-to-360-kw.webp" alt="CCS2 Dual Gun DC Charger" width="801" height="596" loading="lazy"></div>
-  <div class="card__body"><span class="card__kw">40 to 360 kW</span><h3>CCS2 Dual Gun DC Charger</h3><span class="card__price">₹5,44,333</span></div></a><a class="card" href="../store/dc-30-kw-ccs2-x2-ac-22-kw-type-2-ev-triple-gun-combination-charger/" data-cat="dc">
-  <div class="card__img"><img src="../assets/img/products/dc-30-kw-ccs2-x2-ac-22-kw-type-2-ev-triple-gun-combination-charger.webp" alt="82 kW Triple Gun Combination" width="731" height="560" loading="lazy"></div>
-  <div class="card__body"><span class="card__kw">60 + 22 kW</span><h3>82 kW Triple Gun Combination</h3><span class="card__price">Price on request</span></div></a><a class="card" href="../store/dc-60-kw-ccs2-x2-ac-22-kw-type-2-ev-triple-gun-combination-charger/" data-cat="dc">
-  <div class="card__img"><img src="../assets/img/products/dc-60-kw-ccs2-x2-ac-22-kw-type-2-ev-triple-gun-combination-charger.webp" alt="142 kW Triple Gun Combination" width="731" height="560" loading="lazy"></div>
+  <div class="cards"><a class="card" href="../store/gbt-dual-gun-dc-001-ev-fast-charger-15-kw-and-30-kw/" data-cat="dc" data-tilt="5" data-spot>
+  <div class="card__img"><span class="card__ghost" aria-hidden="true">30</span><img src="../assets/img/products/gbt-dual-gun-dc-001-ev-fast-charger-15-kw-and-30-kw.webp" alt="GB/T DC 001 Fast Charger" width="851" height="507" loading="lazy"></div>
+  <div class="card__body"><span class="card__kw">15 to 30 kW</span><h3>GB/T DC 001 Fast Charger</h3><span class="card__price">₹3,77,555</span></div></a><a class="card" href="../store/single-gun-dc-ev-charger-20-kw-and-30-kw/" data-cat="dc" data-tilt="5" data-spot>
+  <div class="card__img"><span class="card__ghost" aria-hidden="true">30</span><img src="../assets/img/products/single-gun-dc-ev-charger-20-kw-and-30-kw.webp" alt="CCS2 Single Gun DC Charger" width="501" height="551" loading="lazy"></div>
+  <div class="card__body"><span class="card__kw">20 to 30 kW</span><h3>CCS2 Single Gun DC Charger</h3><span class="card__price">₹3,99,333</span></div></a><a class="card" href="../store/dual-gun-dc-ev-charger-40-kw-to-360-kw/" data-cat="dc" data-tilt="5" data-spot>
+  <div class="card__img"><span class="card__ghost" aria-hidden="true">360</span><img src="../assets/img/products/dual-gun-dc-ev-charger-40-kw-to-360-kw.webp" alt="CCS2 Dual Gun DC Charger" width="801" height="596" loading="lazy"></div>
+  <div class="card__body"><span class="card__kw">40 to 360 kW</span><h3>CCS2 Dual Gun DC Charger</h3><span class="card__price">₹5,44,333</span></div></a><a class="card" href="../store/dc-30-kw-ccs2-x2-ac-22-kw-type-2-ev-triple-gun-combination-charger/" data-cat="dc" data-tilt="5" data-spot>
+  <div class="card__img"><span class="card__ghost" aria-hidden="true">82</span><img src="../assets/img/products/dc-30-kw-ccs2-x2-ac-22-kw-type-2-ev-triple-gun-combination-charger.webp" alt="82 kW Triple Gun Combination" width="731" height="560" loading="lazy"></div>
+  <div class="card__body"><span class="card__kw">60 + 22 kW</span><h3>82 kW Triple Gun Combination</h3><span class="card__price">Price on request</span></div></a><a class="card" href="../store/dc-60-kw-ccs2-x2-ac-22-kw-type-2-ev-triple-gun-combination-charger/" data-cat="dc" data-tilt="5" data-spot>
+  <div class="card__img"><span class="card__ghost" aria-hidden="true">142</span><img src="../assets/img/products/dc-60-kw-ccs2-x2-ac-22-kw-type-2-ev-triple-gun-combination-charger.webp" alt="142 kW Triple Gun Combination" width="731" height="560" loading="lazy"></div>
   <div class="card__body"><span class="card__kw">120 + 22 kW</span><h3>142 kW Triple Gun Combination</h3><span class="card__price">Price on request</span></div></a></div>
 </div></section>
 </main>

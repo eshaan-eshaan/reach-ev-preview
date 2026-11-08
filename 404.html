@@ -12,7 +12,8 @@
 <link rel="preload" href="/reach-ev-preview/assets/fonts/archivo-wdth.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/reach-ev-preview/assets/css/scroll-kit.css">
 <link rel="stylesheet" href="/reach-ev-preview/assets/css/site.css">
-<script>(function(){var d=document.documentElement;d.classList.add('js');try{var q=new URLSearchParams(location.search);if(!matchMedia('(prefers-reduced-motion: reduce)').matches&&!q.has('nointro')&&(q.has('intro')||!sessionStorage.getItem('reach-intro')))d.classList.add('show-intro')}catch(e){}})();</script>
+<link rel="stylesheet" href="/reach-ev-preview/assets/css/fx.css">
+<script>(function(){var d=document.documentElement;d.classList.add('js');try{var q=new URLSearchParams(location.search);if(!matchMedia('(prefers-reduced-motion: reduce)').matches&&!q.has('nointro')&&(q.has('intro')||!sessionStorage.getItem('reach-intro')))d.classList.add('show-intro')}catch(e){}setTimeout(function(){d.classList.add('hero-ready')},d.classList.contains('show-intro')?660:30);})();</script>
 
 </head>
 <body>
@@ -27,13 +28,16 @@
       <a data-dock-item href="/reach-ev-preview/use-case/">Use Cases</a>
       <div class="has-menu"><button data-dock-item type="button" aria-expanded="false" aria-haspopup="true">Products <svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M1 3l4 4 4-4"/></svg></button>
         <div class="menu">
-          <a href="/reach-ev-preview/products/">All products <small>21</small></a>
-          <a href="/reach-ev-preview/ac-chargers-1/">AC Chargers <small>3.3 to 22 kW</small></a>
-          <a href="/reach-ev-preview/dc-chargers-2/">DC Fast Chargers <small>15 to 360 kW</small></a>
-          <a href="/reach-ev-preview/portable-ev-chargers/">Portable Chargers <small>3.7 to 22 kW</small></a>
-          <a href="/reach-ev-preview/ev-components/">EV Components <small>2W and 3W</small></a>
-          <a href="/reach-ev-preview/customised-canopy-solutions/">Customised Canopy <small>Made to order</small></a>
-          <a href="/reach-ev-preview/qix-cms/">QiX CMS <small>Software</small></a>
+          <div class="menu__list">
+          <a data-view="0" href="/reach-ev-preview/products/">All products <small>21</small></a>
+          <a data-view="1" href="/reach-ev-preview/ac-chargers-1/">AC Chargers <small>3.3 to 22 kW</small></a>
+          <a data-view="2" href="/reach-ev-preview/dc-chargers-2/">DC Fast Chargers <small>15 to 360 kW</small></a>
+          <a data-view="3" href="/reach-ev-preview/portable-ev-chargers/">Portable Chargers <small>3.7 to 22 kW</small></a>
+          <a data-view="4" href="/reach-ev-preview/ev-components/">EV Components <small>2W and 3W</small></a>
+          <a data-view="5" href="/reach-ev-preview/customised-canopy-solutions/">Customised Canopy <small>Made to order</small></a>
+          <a data-view="6" href="/reach-ev-preview/qix-cms/">QiX CMS <small>Software</small></a>
+          </div>
+          <div class="menu__view" aria-hidden="true"><div class="mv on"><img data-src="/reach-ev-preview/assets/img/products/dc-60-kw-ccs2-x2-ac-22-kw-type-2-ev-triple-gun-combination-charger.webp" alt=""></div><div class="mv"><img data-src="/reach-ev-preview/assets/img/products/22-kw-type-2-dual-gun-ac-ev-charger.webp" alt=""></div><div class="mv"><img data-src="/reach-ev-preview/assets/img/charger-dual.webp" alt=""></div><div class="mv mv--mult"><img data-src="/reach-ev-preview/assets/img/products/22-kw-type-2-portable-ev-charger.webp" alt=""></div><div class="mv"><img data-src="/reach-ev-preview/assets/img/products/vehicle-control-unit-vcu-for-2w-and-3w.webp" alt=""></div><div class="mv"><img data-src="/reach-ev-preview/assets/img/products/canopy-manufacturing.webp" alt=""></div><div class="mv"><p class="mv__txt">Scan.<br>Pay.<br>Charge.</p></div></div>
         </div>
       </div>
       <a data-dock-item href="/reach-ev-preview/faq/">FAQs</a>
@@ -48,7 +52,7 @@
   </div>
 </header>
 <main id="main">
-<section class="page-head"><div class="wrap">
+<section class="page-head"><canvas class="dither" data-dither data-px="4" data-colors="#06182A,#0A2C46,#0D4565,#0F6895" aria-hidden="true"></canvas><div class="wrap">
   
   <h1 class="h-lg">This bay is <span class="serif">empty.</span></h1><p class="lede">That page could not be found.</p>
 </div></section><section class="sec"><div class="wrap btns"><a class="btn btn--ink" href="/reach-ev-preview/">Back to home</a><a class="btn btn--line" href="/reach-ev-preview/products/">See the range</a></div></section>

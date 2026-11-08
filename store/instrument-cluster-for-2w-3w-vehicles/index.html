@@ -12,7 +12,8 @@
 <link rel="preload" href="../../assets/fonts/archivo-wdth.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../../assets/css/scroll-kit.css">
 <link rel="stylesheet" href="../../assets/css/site.css">
-<script>(function(){var d=document.documentElement;d.classList.add('js');try{var q=new URLSearchParams(location.search);if(!matchMedia('(prefers-reduced-motion: reduce)').matches&&!q.has('nointro')&&(q.has('intro')||!sessionStorage.getItem('reach-intro')))d.classList.add('show-intro')}catch(e){}})();</script>
+<link rel="stylesheet" href="../../assets/css/fx.css">
+<script>(function(){var d=document.documentElement;d.classList.add('js');try{var q=new URLSearchParams(location.search);if(!matchMedia('(prefers-reduced-motion: reduce)').matches&&!q.has('nointro')&&(q.has('intro')||!sessionStorage.getItem('reach-intro')))d.classList.add('show-intro')}catch(e){}setTimeout(function(){d.classList.add('hero-ready')},d.classList.contains('show-intro')?660:30);})();</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -26,13 +27,16 @@
       <a data-dock-item href="../../use-case/">Use Cases</a>
       <div class="has-menu"><button data-dock-item type="button" aria-expanded="false" aria-haspopup="true" aria-current="true">Products <svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M1 3l4 4 4-4"/></svg></button>
         <div class="menu">
-          <a href="../../products/">All products <small>21</small></a>
-          <a href="../../ac-chargers-1/">AC Chargers <small>3.3 to 22 kW</small></a>
-          <a href="../../dc-chargers-2/">DC Fast Chargers <small>15 to 360 kW</small></a>
-          <a href="../../portable-ev-chargers/">Portable Chargers <small>3.7 to 22 kW</small></a>
-          <a href="../../ev-components/">EV Components <small>2W and 3W</small></a>
-          <a href="../../customised-canopy-solutions/">Customised Canopy <small>Made to order</small></a>
-          <a href="../../qix-cms/">QiX CMS <small>Software</small></a>
+          <div class="menu__list">
+          <a data-view="0" href="../../products/">All products <small>21</small></a>
+          <a data-view="1" href="../../ac-chargers-1/">AC Chargers <small>3.3 to 22 kW</small></a>
+          <a data-view="2" href="../../dc-chargers-2/">DC Fast Chargers <small>15 to 360 kW</small></a>
+          <a data-view="3" href="../../portable-ev-chargers/">Portable Chargers <small>3.7 to 22 kW</small></a>
+          <a data-view="4" href="../../ev-components/">EV Components <small>2W and 3W</small></a>
+          <a data-view="5" href="../../customised-canopy-solutions/">Customised Canopy <small>Made to order</small></a>
+          <a data-view="6" href="../../qix-cms/">QiX CMS <small>Software</small></a>
+          </div>
+          <div class="menu__view" aria-hidden="true"><div class="mv on"><img data-src="../../assets/img/products/dc-60-kw-ccs2-x2-ac-22-kw-type-2-ev-triple-gun-combination-charger.webp" alt=""></div><div class="mv"><img data-src="../../assets/img/products/22-kw-type-2-dual-gun-ac-ev-charger.webp" alt=""></div><div class="mv"><img data-src="../../assets/img/charger-dual.webp" alt=""></div><div class="mv mv--mult"><img data-src="../../assets/img/products/22-kw-type-2-portable-ev-charger.webp" alt=""></div><div class="mv"><img data-src="../../assets/img/products/vehicle-control-unit-vcu-for-2w-and-3w.webp" alt=""></div><div class="mv"><img data-src="../../assets/img/products/canopy-manufacturing.webp" alt=""></div><div class="mv"><p class="mv__txt">Scan.<br>Pay.<br>Charge.</p></div></div>
         </div>
       </div>
       <a data-dock-item href="../../faq/">FAQs</a>
@@ -50,7 +54,7 @@
 <section class="sec" style="padding-top:calc(var(--nav-h) + 2.5rem)"><div class="wrap">
   <ol class="crumbs" style="color:var(--ink-2)"><li><a href="../../">Home</a></li><li><a href="../../products/">Products</a></li><li><a href="../../ev-components/">EV Components</a></li></ol>
   <div class="pdp">
-    <div class="pdp__stage"><img src="../../assets/img/products/instrument-cluster-for-2w-3w-vehicles.webp" alt="Nayana Instrument Cluster" width="760" height="434"></div>
+    <div class="pdp__stage" data-tilt="4"><canvas class="dither" data-dither data-px="4" data-colors="#061524,#0A2A42,#0F4F73,#0F6895" aria-hidden="true"></canvas><img src="../../assets/img/products/instrument-cluster-for-2w-3w-vehicles.webp" alt="Nayana Instrument Cluster" width="760" height="434"></div>
     <div>
       <h1 class="pdp__title">REACH Instrument Cluster for 2W &amp; 3W Vehicles</h1>
       <p class="pdp__price">Price on request</p>
@@ -60,11 +64,11 @@
       <ul class="feat"><li>LCD display with intuitive GUI</li><li>Powered by +12VDC (7V-16V) input.</li><li>Isolated CAN Communication with BMS and MCU</li><li>GPIOs for left and right winkers, high beam, and side stand</li><li>All I/O’s &amp; CAN ports with short circuits and over-voltage protection.</li><li>It has a rechargeable power backup system (4 Hours) using a lithium polymer battery.</li><li>Tri-colour LED to display the charging status.</li><li>Single LED to indicate the battery faults.</li><li>Keypad for navigating through different screens.</li><li>Inbuilt RTC</li><li>IP67 Enclosure</li></ul>
     </div>
   </div>
-  <h2 class="h-md" style="margin:clamp(3rem,8vh,5rem) 0 1.2rem">Also in EV Components</h2><div class="cards"><a class="card" href="../../store/vehicle-control-unit-vcu-for-2w-and-3w/" data-cat="components">
+  <h2 class="h-md" style="margin:clamp(3rem,8vh,5rem) 0 1.2rem">Also in EV Components</h2><div class="cards"><a class="card" href="../../store/vehicle-control-unit-vcu-for-2w-and-3w/" data-cat="components" data-tilt="5" data-spot>
   <div class="card__img"><img src="../../assets/img/products/vehicle-control-unit-vcu-for-2w-and-3w.webp" alt="Astra 1.0 Vehicle Control Unit" width="760" height="633" loading="lazy"></div>
-  <div class="card__body"><span class="card__kw">2W and 3W</span><h3>Astra 1.0 Vehicle Control Unit</h3><span class="card__price">Price on request</span></div></a><a class="card" href="../../store/dc-dc-converter-10a-20a-for-2w-and-3w/" data-cat="components">
+  <div class="card__body"><span class="card__kw">2W and 3W</span><h3>Astra 1.0 Vehicle Control Unit</h3><span class="card__price">Price on request</span></div></a><a class="card" href="../../store/dc-dc-converter-10a-20a-for-2w-and-3w/" data-cat="components" data-tilt="5" data-spot>
   <div class="card__img"><img src="../../assets/img/products/dc-dc-converter-10a-20a-for-2w-and-3w.webp" alt="DC-DC Converter 10A / 20A" width="741" height="555" loading="lazy"></div>
-  <div class="card__body"><span class="card__kw">10A / 20A</span><h3>DC-DC Converter 10A / 20A</h3><span class="card__price">₹210</span></div></a><a class="card" href="../../store/standalone-ev-charger-36v-48v-72v/" data-cat="components">
+  <div class="card__body"><span class="card__kw">10A / 20A</span><h3>DC-DC Converter 10A / 20A</h3><span class="card__price">₹210</span></div></a><a class="card" href="../../store/standalone-ev-charger-36v-48v-72v/" data-cat="components" data-tilt="5" data-spot>
   <div class="card__img"><img src="../../assets/img/products/standalone-ev-charger-36v-48v-72v.webp" alt="Standalone Charger 36 / 48 / 72 V" width="760" height="285" loading="lazy"></div>
   <div class="card__body"><span class="card__kw">1.5 kW</span><h3>Standalone Charger 36 / 48 / 72 V</h3><span class="card__price">Price on request</span></div></a></div>
 </div></section>
